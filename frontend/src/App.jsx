@@ -34,7 +34,7 @@ function App(){
   }
   function send(){
        setStatus(true)
-       axios.post("http://localhost:5001/sendemail",{msg:msg,emailList:emailList})
+       axios.post("https://bulk-mail-backend-iota.vercel.app/sendemail",{msg:msg,emailList:emailList})
        .then(function(data){
         if(data.data === true){
           alert("Email Sent Successfully")
